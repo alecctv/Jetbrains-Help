@@ -22,17 +22,23 @@ window.showLicenseForm = function () {
         document.getElementById('assigneeName').value = licenseInfo.assigneeName
         document.getElementById('expiryDate').value = licenseInfo.expiryDate
     } else {
-        document.getElementById('licenseeName').value = '光云'
-        document.getElementById('assigneeName').value = '藏柏'
-        document.getElementById('expiryDate').value = '2111-11-11'
+        document.getElementById('licenseeName').value = 'ZH'
+        document.getElementById('assigneeName').value = 'ZH'
+        document.getElementById('expiryDate').value = '2099-11-11'
     }
     document.getElementById('mask').style.display = 'block'
     document.getElementById('form').style.display = 'block'
 }
 window.showVmoptins = function () {
-    alert("-javaagent:/(Your Path)/ja-netfilter/ja-netfilter.jar\n" +
-        "--add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED\n" +
-        "--add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED")
+    // 可复制内容的弹框
+    let text = "--add-opens=java.base/jdk.internal.org.objectweb.asm=all-unnamed\n" +
+        "--add-opens=java.base/jdk.internal.org.objectweb.asm.tree=all-unnamed\n"+
+        "-javaagent:/(your path)/ja-netfilter/ja-netfilter.jar"
+    copyText(text)
+        .then(() => {
+            alert(text+"\n \n The configuration has been copied to the clipboard, please go to the idea64.exe.vmoptions file and paste it in");
+        })
+
 }
 //@see https://zhuanlan.zhihu.com/p/597944027
 const copyText = async (val) => {

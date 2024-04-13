@@ -12,7 +12,7 @@
 <header class="tip sticky flex items-center py-6">
     <p>
         🇨🇳 Download <a href="ja-netfilter" title="Download jetbra first">ja-netfilter.zip</a> , and configure
-        your JetBrains's <strong onclick="showVmoptins()">vmoptions!</strong> <br>
+        your JetBrains's <a onclick="showVmoptins()">vmoptions!</a> <br>
         🇨🇳 Also you can <a onclick="showLicenseForm()">Refill license information</a> to customizer your license!</br>
         <strong>🇨🇳 Please note that this page is only developed and used by <span
                 th:text="${defaults.getDefaultLicenseName()} + '/' + ${defaults.getDefaultAssigneeName()}"></span>
@@ -103,4 +103,39 @@
 </body>
 <script type="text/javascript" src="/js/index.js"></script>
 <script type="text/javascript" src="/js/jquery.js"></script>
+<style>
+    body {
+        background-color: #6e3f3f; /* 设置背景颜色为深色 */
+        color: #ffffff; /* 设置文本颜色为白色 */
+        font-family: 'Courier New', Courier, monospace; /* 设置字体为等宽字体，给人一种编程的感觉 */
+    }
+
+    header {
+        background-color: #6e3f3f; /* 设置头部背景颜色为比主背景稍亮的颜色 */
+        border-bottom: 1px solid #3f3f3f; /* 添加底部边框 */
+    }
+
+    .card {
+        background-color: #6e3f3f; /* 设置卡片背景颜色为比主背景稍亮的颜色 */
+        border: 1px solid #6e3f3f; /* 添加边框 */
+        transition: all 0.3s ease; /* 添加过渡效果 */
+    }
+
+    .card:hover {
+        transform: scale(1.05); /* 当鼠标悬停在卡片上时，放大卡片 */
+        box-shadow: 0 0 10px #00ff00; /* 添加绿色的阴影效果 */
+    }
+
+    button {
+        background-color: #00ff00; /* 设置按钮背景颜色为鲜绿色 */
+        color: #000000; /* 设置按钮文本颜色为黑色 */
+        border: none; /* 移除边框 */
+        cursor: pointer; /* 当鼠标悬停在按钮上时，改变鼠标样式 */
+        transition: all 0.3s ease; /* 添加过渡效果 */
+    }
+
+    button:hover {
+        background-color: #00dd00; /* 当鼠标悬停在按钮上时，改变按钮背景颜色 */
+    }
+</style>
 </html>

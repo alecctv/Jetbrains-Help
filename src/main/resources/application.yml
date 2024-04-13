@@ -4,8 +4,8 @@ spring:
   thymeleaf:
     cache: false
 server:
-  port: 10768
+  port: 9998
 help:
-  default-license-name: 光云
-  default-assignee-name: 藏柏
-  default-expiry-date: 2111-11-11
+  default-license-name: ZH
+  default-assignee-name: ZH
+  default-expiry-date: 2099-11-11
